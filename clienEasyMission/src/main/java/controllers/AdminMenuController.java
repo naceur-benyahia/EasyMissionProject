@@ -81,6 +81,14 @@ public class AdminMenuController extends AnchorPane implements Initializable{
     }
     @FXML
     void Messages(ActionEvent event) {
-    	application.gotoMessages();
+    	application.gotoMessage();
+    }
+    @FXML
+    void eventsMenu(ActionEvent event) {
+    	application.gotoEvent();
+    }
+    @FXML
+    void Notifications(ActionEvent event) {
+    	
     }
 }

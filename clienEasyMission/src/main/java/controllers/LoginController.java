@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import clienEasyMission.Main;
+import clienEasyMission.MainFx;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,12 +29,12 @@ public class LoginController implements Initializable{
 	    private JFXTextField Login;
 
 	
-	Main application; 
-    public Main getApplication() {
+	MainFx application; 
+    public MainFx getApplication() {
         return application;
     }
 
-    public void setApplication(Main application) {
+    public void setApplication(MainFx application) {
         this.application = application;
     }
 	@Override
@@ -55,7 +56,7 @@ public class LoginController implements Initializable{
 				application.gotoLogin();
 			}
 			else{
-				application.gotoMessage();
+				application.gotoAdminMenu();
 				System.out.println(application.person.getLogin());
 			}
 		} catch (NamingException e) {

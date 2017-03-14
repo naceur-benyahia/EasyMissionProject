@@ -5,6 +5,7 @@ import java.util.List;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import entities.Administrator;
 import entities.User;
 import services.UserEJBRemote;
 
@@ -14,11 +15,19 @@ public class UserCRUD {
 			UserEJBRemote proxy = (UserEJBRemote) ctx.lookup("/easyMission-ear/easyMission-ejb/"
 					+ "UserEJB!services.UserEJBRemote");
 			
-			
-			List<User> users = proxy.getAllUser();
-			for (User user : users) {
-				System.out.println(user);
-			}
+//			User u = new Administrator();
+//			u.setEmail("email");
+//			u.setFirstName("firstName");
+//			u.setLastName("lastName");
+//			u.setLogin("login");
+//			u.setPassword("password");
+//			u.setPhoneNumber(123456);
+//			proxy.addUser(u);
+			proxy.deleteUser(proxy.findById(1));
+//			List<User> users = proxy.getAllUser();
+//			for (User user : users) {
+//				System.out.println(user);
+//			}
 			
 			
 			
