@@ -25,9 +25,7 @@ import javafx.scene.layout.VBox;
 
 public class AdminMenuController extends AnchorPane implements Initializable{
 
-		@FXML
-		private JFXButton jobOffer;
-		
+
 	    @FXML
 	    private ImageView imgv;
 
@@ -79,7 +77,7 @@ public class AdminMenuController extends AnchorPane implements Initializable{
         }
     @FXML
     void forumm(ActionEvent event) {
-    	application.gotoForum();
+    //	application.gotoForum();
     }
     @FXML
     void Messages(ActionEvent event) {
@@ -92,9 +90,5 @@ public class AdminMenuController extends AnchorPane implements Initializable{
     @FXML
     void Notifications(ActionEvent event) {
     	
-    }
-    @FXML
-    void goJobOffer(ActionEvent event) {
-    	application.gotoJobOffer();
     }
 }

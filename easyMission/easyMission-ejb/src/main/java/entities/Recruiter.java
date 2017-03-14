@@ -1,8 +1,6 @@
 package entities;
 
 import java.io.Serializable;
-import java.util.List;
-
 import javax.persistence.*;
 
 /**
@@ -21,9 +19,6 @@ public class Recruiter extends User implements Serializable {
 	private String facebook;
 	private String linkedin;
 	private boolean premium;
-	@OneToMany(mappedBy="recruiter")
-	List<JobOffer> jobOffers;
-	
 	private static final long serialVersionUID = 1L;
 
 	public Recruiter() {
@@ -36,14 +31,6 @@ public class Recruiter extends User implements Serializable {
 
 	public void setCompany(String company) {
 		this.company = company;
-	}
-	
-	public List<JobOffer> getJobOffers() {
-		return jobOffers;
-	}
-
-	public void setJobOffers(List<JobOffer> jobOffers) {
-		this.jobOffers = jobOffers;
 	}
 
 	public String getDescription() {
