@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="416.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelpUsersController">
+   <children>
+      <TableView fx:id="usersView" layoutY="33.0" prefHeight="369.0" prefWidth="608.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+        <columns>
+          <TableColumn fx:id="colEmail" prefWidth="97.0" text="Email" />
+          <TableColumn fx:id="colFirstName" prefWidth="102.0" text="First Name" />
+            <TableColumn fx:id="colLastName" prefWidth="117.0" text="Last Name" />
+            <TableColumn fx:id="colLogin" prefWidth="126.0" text="Login" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="165.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <JFXButton layoutY="405.0" onAction="#Messages" prefHeight="30.0" prefWidth="303.0" style="-fx-background-color: #2b53a4;" text="Return" textFill="#abc5ee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="304.0" layoutY="405.0" onAction="#SelectMessages" prefHeight="30.0" prefWidth="303.0" style="-fx-background-color: #2b53a4;" text="Select" textFill="#abc5ee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="searchNameField" layoutX="7.0" layoutY="2.0" onKeyPressed="#searchAction" prefHeight="25.0" prefWidth="303.0" promptText="Search ...">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

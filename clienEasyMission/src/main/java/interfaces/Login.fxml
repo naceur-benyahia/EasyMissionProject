@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <Pane prefHeight="395.0" prefWidth="596.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="25.21" radius="12.475000000000001" width="26.69" />
+         </effect>
+         <children>
+            <ImageView fitHeight="395.0" fitWidth="596.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="Login" focusColor="#1d3272" layoutX="125.0" layoutY="103.0" maxWidth="380.0" minWidth="365.0" prefHeight="53.0" prefWidth="380.0" promptText="Email" unFocusColor="#c4c710">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#1d3272" layoutX="125.0" layoutY="190.0" maxWidth="372.0" minWidth="355.0" prefHeight="50.0" prefWidth="372.0" promptText="Password" unFocusColor="#c4c710">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="24.0" layoutY="23.0" prefHeight="29.0" prefWidth="94.0" text="Admin panel" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="173.0" layoutY="284.0" prefHeight="36.0" prefWidth="88.0" ripplerFill="#2b53a4" style="-fx-background-color: #2b53a4;" text="Register" textFill="#fffdfd">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="signIn" layoutX="315.0" layoutY="284.0" onAction="#connect" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #2b53a4;" text="Sign in" textFill="#f5f4f4">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

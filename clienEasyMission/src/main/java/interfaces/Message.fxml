@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MessageConroller">
+   <children>
+      <Pane prefHeight="614.0" prefWidth="959.0">
+         <children>
+            <ImageView fitHeight="614.0" fitWidth="959.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" focusTraversable="true" layoutY="1.0" overLayVisible="false" prefHeight="650.0" prefWidth="235.0">
+               <children>
+                  <VBox fx:id="vbox" prefHeight="652.0" prefWidth="239.0">
+                     <children>
+                        <Label prefHeight="96.0" prefWidth="237.0" text="Administrators Menu" textAlignment="CENTER" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <JFXButton prefHeight="45.0" prefWidth="220.0" text="Candidates Management" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton prefHeight="49.0" prefWidth="220.0" text="Recruiters Management" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton prefHeight="51.0" prefWidth="220.0" text="Events Management" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton prefHeight="46.0" prefWidth="220.0" text="Articles Management" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton prefHeight="38.0" prefWidth="220.0" text="Forum Management" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton prefHeight="49.0" prefWidth="213.0" text="Messages" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <HBox prefHeight="51.0" prefWidth="235.0">
+                           <children>
+                              <JFXButton fx:id="notifBtn" onAction="#notifications" prefHeight="49.0" prefWidth="187.0" text="Notifications" textFill="#b0b6c6">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fx:id="image" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/notification-icon-63261.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label fx:id="number" prefHeight="48.0" prefWidth="28.0" textAlignment="CENTER" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <JFXButton prefHeight="52.0" prefWidth="220.0" text="Statistics" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#logOut" prefHeight="36.0" prefWidth="220.0" text="Log Out" textFill="#b0b6c6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children></JFXDrawer>
+            <JFXButton layoutX="515.0" layoutY="284.0" onAction="#deleteMessage" prefHeight="30.0" prefWidth="96.0" ripplerFill="#d3e3ff" style="-fx-background-color: #2b53a4;" text="Delete" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="459.0" layoutY="554.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #2b53a4;" text="Send" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXHamburger fx:id="hamburger" layoutX="910.0" layoutY="17.0" />
+            <JFXTextField fx:id="textField" focusColor="#ffffff00" layoutX="286.0" layoutY="324.0" maxWidth="450.0" prefHeight="25.0" prefWidth="450.0" promptText="To who ?" unFocusColor="#eeff00">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXTextField>
+            <JFXTextArea fx:id="textArea" layoutX="286.0" layoutY="363.0" prefHeight="96.0" prefWidth="450.0" promptText="Write a Message ..." unFocusColor="#d4ff00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXTextArea>
+            <TabPane layoutX="270.0" layoutY="72.0" prefHeight="200.0" prefWidth="585.0" styleClass="jfx-slider" stylesheets="@../resources/css/jfoenix-main-demo.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Received">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="messagesView" layoutY="-1.0" prefHeight="173.0" prefWidth="585.0" stylesheets="@../resources/css/jfoenix-main-demo.css">
+                                <columns>
+                                  <TableColumn fx:id="colPerson" prefWidth="123.0" text="From" />
+                                  <TableColumn fx:id="colContent" minWidth="8.0" prefWidth="205.0" text="Content" />
+                                    <TableColumn fx:id="colDate" prefWidth="288.0" text="Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Sent">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="messagesView1" layoutY="-2.0" prefHeight="173.0" prefWidth="585.0">
+                                 <columns>
+                                    <TableColumn fx:id="colContent1" minWidth="8.0" prefWidth="350.0" text="Content" />
+                                    <TableColumn fx:id="colDate1" prefWidth="235.0" text="Date" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <JFXTextField fx:id="searchTxt" layoutX="271.0" layoutY="37.0" onKeyTyped="#searchAction" promptText="Search" styleClass="jfx-text-field" stylesheets="@../resources/css/jfoenix-main-demo.css" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="comboBox" layoutX="286.0" layoutY="492.0" prefHeight="25.0" prefWidth="450.0" promptText="Message" unFocusColor="#e5ff00" />
+            <Label layoutX="651.0" layoutY="29.0" prefHeight="17.0" prefWidth="73.0" text="Logged As :" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="loggesAs" layoutX="736.0" layoutY="29.0" prefHeight="19.0" prefWidth="118.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="762.0" layoutY="326.0" onAction="#Help" prefHeight="25.0" prefWidth="96.0" ripplerFill="#d3e3ff" style="-fx-background-color: #2b53a4;" text="Help" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
