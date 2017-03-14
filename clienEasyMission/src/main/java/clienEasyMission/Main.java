@@ -53,7 +53,7 @@ public class Main extends Application{
     public void gotoMessage() {
         try {
             MessageConroller message = (MessageConroller) replaceSceneContent("/interfaces/Message.fxml");
-            message.setApp(this);
+           // message.setApp(this);
             
         } catch (Exception ex) {
         	ex.printStackTrace();
@@ -66,7 +66,7 @@ public class Main extends Application{
         	
         	HelpUsersController help = (HelpUsersController) replaceSceneContent("/interfaces/HelpUsers.fxml");
         	
-            help.setApp(this);
+            //help.setApp(this);
             
         } catch (Exception ex) {
         	ex.printStackTrace();
@@ -100,7 +100,7 @@ public class Main extends Application{
 
         	
             NotificationController notification = (NotificationController) replaceSceneContent("/interfaces/Notifications.fxml");
-            notification.setApp(this);
+            //notification.setApp(this);
         } catch (Exception ex) {
         	ex.printStackTrace();
         }
@@ -109,7 +109,7 @@ public class Main extends Application{
     public void gotoLogin() {
     	try {
             LoginController notification = (LoginController) replaceSceneContent("/interfaces/Login.fxml");
-            notification.setApplication(this);
+            //notification.setApplication(this);
         } catch (Exception ex) {
         	ex.printStackTrace();
         }

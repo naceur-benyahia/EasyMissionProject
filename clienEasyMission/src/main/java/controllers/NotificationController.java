@@ -12,6 +12,7 @@ import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 
 import clienEasyMission.Main;
+import clienEasyMission.MainFx;
 import entities.Notification;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,7 +32,7 @@ import javafx.scene.layout.VBox;
 import services.NotificationServiceEJBRemote;
 
 public class NotificationController implements Initializable {
-	Main main;
+	MainFx main;
 
 	@FXML
 	private VBox vbox;
@@ -120,7 +121,7 @@ public class NotificationController implements Initializable {
 		
 	}
 
-	public void setApp(Main application) {
+	public void setApp(MainFx application) {
 		this.main = application;
 	}
 

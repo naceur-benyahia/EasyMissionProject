@@ -10,6 +10,7 @@ import javax.naming.NamingException;
 import com.jfoenix.controls.JFXTextField;
 
 import clienEasyMission.Main;
+import clienEasyMission.MainFx;
 import entities.Message;
 import entities.User;
 import javafx.collections.FXCollections;
@@ -49,7 +50,7 @@ public class HelpUsersController implements Initializable {
 
 	private ObservableList<User> data;
 
-	private Main main;
+	private MainFx main;
 	private MessageConroller messageCont;
 	private static String txt;
 
@@ -131,7 +132,7 @@ public class HelpUsersController implements Initializable {
 
 	}
 
-	public void setApp(Main application) {
+	public void setApp(MainFx application) {
 		this.main = application;
 
 	}

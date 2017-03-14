@@ -49,7 +49,7 @@ import services.NotificationServiceEJBRemote;
 import services.UserEJBRemote;
 
 public class MessageConroller implements Initializable {
-	Main main;
+	MainFx main;
 	MainFx mainfx;
 	AdminMenuController box;
 	@FXML
@@ -96,7 +96,7 @@ public class MessageConroller implements Initializable {
 
 	HelpUsersController heelp;
 	
-	public void setApp(Main application) {
+	public void setApp(MainFx application) {
 		this.main = application;
 	}
 	
@@ -348,7 +348,10 @@ public class MessageConroller implements Initializable {
 	@FXML
 	void Help(ActionEvent event) {
 		main.gotoHelp();
-		
-		
+	}
+
+	@FXML
+	void Events(ActionEvent event) {
+		main.gotoEvent();
 	}
 }
