@@ -1,13 +1,17 @@
 entities\Recruiter.class
+services\EventEJBRemote.class
+services\EventEJB.class
 entities\Notification.class
 entities\Candidate.class
 services\MessageServiceEJBRemote.class
 entities\Message.class
 services\NotificationServiceEJB.class
 services\UserEJBRemote.class
+entities\Events.class
 entities\User.class
 services\MessageServiceEJB.class
 services\UserEJBLocal.class
 services\UserEJB.class
 entities\Administrator.class
+services\EventEJBLocal.class
 services\NotificationServiceEJBRemote.class
