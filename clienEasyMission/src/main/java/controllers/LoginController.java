@@ -39,7 +39,8 @@ public class LoginController implements Initializable{
     }
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		Login.setStyle("-fx-text-inner-color: white;");
+		password.setStyle("-fx-text-inner-color: white;");
 		
 	}
 	@FXML
