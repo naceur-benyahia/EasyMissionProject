@@ -1,0 +1,13 @@
+entities\Recruiter.class
+entities\Notification.class
+entities\Candidate.class
+services\MessageServiceEJBRemote.class
+entities\Message.class
+services\NotificationServiceEJB.class
+services\UserEJBRemote.class
+entities\User.class
+services\MessageServiceEJB.class
+services\UserEJBLocal.class
+services\UserEJB.class
+entities\Administrator.class
+services\NotificationServiceEJBRemote.class
