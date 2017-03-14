@@ -36,12 +36,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <JFXButton layoutX="173.0" layoutY="284.0" prefHeight="36.0" prefWidth="88.0" ripplerFill="#2b53a4" style="-fx-background-color: #2b53a4;" text="Register" textFill="#fffdfd">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" />
-               </effect>
-            </JFXButton>
-            <JFXButton fx:id="signIn" layoutX="315.0" layoutY="284.0" onAction="#connect" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #2b53a4;" text="Sign in" textFill="#f5f4f4">
+            <JFXButton fx:id="signIn" layoutX="267.0" layoutY="288.0" onAction="#connect" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #2b53a4;" text="Sign in" textFill="#f5f4f4">
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>
