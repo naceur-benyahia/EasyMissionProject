@@ -21,7 +21,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import services.NotificationServiceEJBRemote;
 import controllers.EventController;
+import controllers.ForumController;
+import controllers.ForumStatController;
 import controllers.HelpUsersController;
+import controllers.JobOfferController;
+import controllers.JobOfferValidationController;
 import controllers.LoginController;
 
 public class MainFx extends Application {
@@ -34,6 +38,38 @@ public class MainFx extends Application {
 		primaryStage.setTitle("EASY_MISSION");
 		primaryStage.show();
 	}
+	 public void gotoForumStat() {
+	        try {
+	            ForumStatController a = (ForumStatController) replaceSceneContent("/interfaces/ForumStat.fxml");
+	            a.setApplication(this);
+	        } catch (Exception ex) {
+	            java.util.logging.Logger.getLogger(MainFx.class.getName()).log(Level.SEVERE, null, ex);
+	        }
+	    }
+	 public void gotoJobOfferValidation() {
+	        try {
+	            JobOfferValidationController a = (JobOfferValidationController) replaceSceneContent("/interfaces/JobOfferValidation.fxml");
+	            a.setApplication(this);
+	        } catch (Exception ex) {
+	            java.util.logging.Logger.getLogger(MainFx.class.getName()).log(Level.SEVERE, null, ex);
+	        }
+	    }
+	public void gotoForum() {
+        try {
+            ForumController a = (ForumController) replaceSceneContent("/interfaces/Forum.fxml");
+            a.setApplication(this);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(MainFx.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+	 public void gotoJobOffer() {
+	        try {
+	            JobOfferController a = (JobOfferController) replaceSceneContent("/interfaces/JobOffer.fxml");
+	            a.setApplication(this);
+	        } catch (Exception ex) {
+	            java.util.logging.Logger.getLogger(MainFx.class.getName()).log(Level.SEVERE, null, ex);
+	        }
+	    }
 	public void gotoEvent() {
         try {
             EventController a = (EventController) replaceSceneContent("/interfaces/Events.fxml");
