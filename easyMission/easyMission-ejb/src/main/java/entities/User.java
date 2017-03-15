@@ -39,8 +39,8 @@ public class User implements Serializable {
 	
 	@OneToMany(mappedBy="user")
 	private List<Notification> listNotifications;
-	
-
+	@OneToMany(mappedBy="user")
+	private List<Events> listEvents;
 
 	public User() {
 		super();

@@ -89,6 +89,8 @@ public class NotificationServiceEJB implements NotificationServiceEJBRemote {
 		.getSingleResult();
 		 
 	}
+
+	
 }
 
 

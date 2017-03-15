@@ -23,7 +23,9 @@ public class Events implements Serializable {
 	private Date datefin;
 	private int duree;
 	private int nbparticipant;
-
+	@ManyToOne
+	private User user;
+	
 	private static final long serialVersionUID = 1L;
 
 	public Events() {
