@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminMenuController">
 	<children>
 		<Pane prefHeight="650.0" prefWidth="1000.0">
 			<children>
@@ -82,7 +79,10 @@
 						</VBox>
 					</children>
 				</JFXDrawer>
-				<Label layoutX="695.0" layoutY="146.0" prefHeight="118.0" prefWidth="137.0" text="azd" />
+				<Label layoutX="252.0" layoutY="221.0" prefHeight="208.0" prefWidth="566.0" text="Easy Mission" textFill="#230c83">
+               <font>
+                  <Font name="System Bold" size="93.0" />
+               </font></Label>
 			</children>
 		</Pane>
 	</children>
