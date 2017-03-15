@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXDrawer?>
-<?import com.jfoenix.controls.JFXHamburger?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -15,11 +16,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventController">
    <children>
       <Pane prefHeight="995.0" prefWidth="1663.0">
          <children>
-            <ImageView fx:id="imgv" fitHeight="1000.0" fitWidth="1700.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="1000.0" fitWidth="1700.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/background.png" />
                </image>
@@ -118,11 +119,26 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXButton>
-            <JFXButton onAction="#Notifications" prefHeight="49.0" prefWidth="237.0" text="Notifications" textFill="#b0b6c6">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </JFXButton>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton onAction="#Notifications" prefHeight="49.0" prefWidth="237.0" text="Notifications" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="image" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/notification-icon-63261.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="number" prefHeight="48.0" prefWidth="28.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
             <JFXButton prefHeight="52.0" prefWidth="236.0" text="Statistics" textFill="#b0b6c6">
                <font>
                   <Font name="System Bold" size="17.0" />

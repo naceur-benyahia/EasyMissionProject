@@ -24,6 +24,8 @@ import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 
 import clienEasyMission.MainFx;
 import entities.Events;
+import entities.Notification;
+import entities.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -47,6 +49,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.util.converter.LocalDateStringConverter;
 import services.EventEJBRemote;
+import services.NotificationServiceEJBRemote;
+import services.UserEJBRemote;
 
 public class EventController extends AnchorPane implements Initializable {
 
@@ -64,7 +68,9 @@ public class EventController extends AnchorPane implements Initializable {
 
 	@FXML
 	private JFXButton idforum;
-
+	@FXML
+    private ImageView image;
+	
 	@FXML
 	private TableView<Events> tableaffichage;
 	@FXML
@@ -95,8 +101,11 @@ public class EventController extends AnchorPane implements Initializable {
 	private JFXTextField adresse;
 	@FXML
 	private Label erreur;
-	MainFx application;
+	@FXML
+	private Label number;
 	
+	MainFx application;
+
 	public MainFx getApplication() {
 		return application;
 	}
@@ -107,6 +116,18 @@ public class EventController extends AnchorPane implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		InitialContext ctx;
+		try {
+			ctx = new InitialContext();
+			NotificationServiceEJBRemote proxy1 = (NotificationServiceEJBRemote) ctx.lookup(
+					"/easyMission-ear/easyMission-ejb/NotificationServiceEJB!services.NotificationServiceEJBRemote");
+			if (proxy1.getAllNotificationByUserBySeen(application.person).isEmpty()) {
+				image.setVisible(false);
+
+			} else number.setText(""+proxy1.countNotifNotSeen(application.person));
+		 
+
+		
 
 		drawer.setSidePane(box);
 
@@ -123,8 +144,7 @@ public class EventController extends AnchorPane implements Initializable {
 				drawer.open();
 			}
 		});
-		InitialContext ctx;
-		try {
+		
 			ctx = new InitialContext();
 			EventEJBRemote proxy;
 
@@ -145,7 +165,7 @@ public class EventController extends AnchorPane implements Initializable {
 
 	@FXML
 	void forumm(ActionEvent event) {
-	//	application.gotoForum();
+		// application.gotoForum();
 	}
 
 	@FXML
@@ -155,6 +175,10 @@ public class EventController extends AnchorPane implements Initializable {
 		ctx = new InitialContext();
 		EventEJBRemote proxy;
 		proxy = (EventEJBRemote) ctx.lookup("/easyMission-ear/easyMission-ejb/EventEJB!services.EventEJBRemote");
+		NotificationServiceEJBRemote proxy1 = (NotificationServiceEJBRemote) ctx.lookup(
+				"/easyMission-ear/easyMission-ejb/NotificationServiceEJB!services.NotificationServiceEJBRemote");
+		UserEJBRemote proxy2 = (UserEJBRemote) ctx
+				.lookup("/easyMission-ear/easyMission-ejb/UserEJB!services.UserEJBRemote");
 
 		if (!titre.getText().equals("") && !description.getText().equals("") && !adresse.getText().equals("")) {
 
@@ -177,6 +201,15 @@ public class EventController extends AnchorPane implements Initializable {
 			e.setDatefin(d1);
 			e.setDatedebut(d);
 			proxy.AddEvent(e);
+			for (User user : proxy2.getAllUser()) {
+				Notification n = new Notification();
+				n.setContent("There is a new Event : " + e.getTitre());
+				n.setSendDate(new Date());
+				n.setUser(user);
+				n.setSeen(false);
+				proxy1.addNotification(n);
+			}
+
 			titre.clear();
 			description.clear();
 			adresse.clear();
@@ -284,19 +317,20 @@ public class EventController extends AnchorPane implements Initializable {
 		// datedebut.setValue(e.getDatedebut());
 		// datefin.setValue(e.getDatefin());
 	}
-	
+
 	@FXML
-    void Messages(ActionEvent event) {
+	void Messages(ActionEvent event) {
 		application.gotoMessage();
-    }
+	}
+
 	@FXML
-    void LogOut(ActionEvent event) {
+	void LogOut(ActionEvent event) {
 		application.gotoLogin();
-    }
+	}
+
 	@FXML
-    void Notifications(ActionEvent event) {
+	void Notifications(ActionEvent event) {
 		application.gotoNotification();
-    }
-	
+	}
 
 }
